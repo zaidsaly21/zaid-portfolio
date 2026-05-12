@@ -267,3 +267,122 @@ footer {
     height: 360px;
   }
 }
+
+/* Advanced Contact Section */
+.contact {
+  text-align: center;
+}
+
+.contact-header {
+  max-width: 760px;
+  margin: 0 auto 42px;
+}
+
+.section-tag {
+  color: #00ffae;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-header h2 {
+  font-size: clamp(34px, 5vw, 54px);
+  margin-bottom: 16px;
+}
+
+.contact-header p {
+  color: #c7d8d4;
+  font-size: 17px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.contact-card {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 32px 26px;
+  border-radius: 26px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
+  border: 1px solid rgba(0, 255, 174, 0.16);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.25);
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(circle at top, rgba(0, 255, 174, 0.18), transparent 45%);
+  opacity: 0;
+  transition: 0.35s ease;
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 255, 174, 0.38);
+  box-shadow: 0 28px 90px rgba(0, 255, 174, 0.13);
+}
+
+.contact-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 20px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 255, 174, 0.12);
+  color: #00ffae;
+  border: 1px solid rgba(0, 255, 174, 0.22);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.contact-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card p {
+  color: #c7d8d4;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card span {
+  color: #00ffae;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer same color style */
+footer {
+  border-top: 1px solid rgba(0, 255, 174, 0.12);
+  background: rgba(2, 15, 13, 0.65);
+}
+
+footer p {
+  color: #00ffae;
+}
+
+/* Mobile contact cards */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
