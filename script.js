@@ -1,19 +1,20 @@
-const reveals = document.querySelectorAll(".reveal");
-const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+const cards = document.querySelectorAll(".section-card");
+const heroImage = document.querySelector(".hero-image img");
 
-const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.88;
+const revealSections = () => {
+    const triggerPoint = window.innerHeight * 0.85;
 
-    reveals.forEach((item) => {
-        const top = item.getBoundingClientRect().top;
-        if (top < triggerBottom) {
-            item.classList.add("show");
+    cards.forEach((card) => {
+        const top = card.getBoundingClientRect().top;
+        if (top < triggerPoint) {
+            card.classList.add("show");
         }
     });
 };
 
-const setActiveLink = () => {
+const setActiveNav = () => {
     let current = "";
 
     sections.forEach((section) => {
@@ -34,11 +35,26 @@ const setActiveLink = () => {
 };
 
 window.addEventListener("scroll", () => {
-    revealOnScroll();
-    setActiveLink();
+    revealSections();
+    setActiveNav();
 });
 
 window.addEventListener("load", () => {
-    revealOnScroll();
-    setActiveLink();
+    revealSections();
+    setActiveNav();
+
+    if (heroImage) {
+        heroImage.classList.add("hero-visible");
+    }
+
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
 });
