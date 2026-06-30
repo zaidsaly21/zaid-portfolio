@@ -104,6 +104,9 @@ body {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 24px;
   border-radius: 14px;
   text-decoration: none;
