@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager App | Zaid Saly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Zaid Saly</div>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="section card" style="margin-top:140px;">
+    <span class="project-label">Task Manager App</span>
+    <h2>Full-stack task management application</h2>
+
+    <div class="project-meta">
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>MongoDB</span>
+      <span>Mongoose</span>
+    </div>
+
+    <div class="project-details">
+      <p>
+        A full-stack task management application built to practice end-to-end development, from database design to a working user interface. The frontend is built with React, organized into reusable components (TaskForm, TaskList, TaskItem), each with its own styling. The backend is a Node.js and Express REST API, with MongoDB and Mongoose handling data storage and schema validation.
+      </p>
+
+      <div class="project-summary">
+        <h3>What it does</h3>
+        <ul>
+          <li>Create, view, update, and delete tasks (full CRUD functionality)</li>
+          <li>Each task includes a title, description, category, completion status, and optional due date</li>
+          <li>Automatic timestamps for when tasks are created and updated</li>
+        </ul>
+
+        <h3>How it was built</h3>
+        <ul>
+          <li>React components for the form, task list, and individual task items, keeping the UI modular and easy to maintain</li>
+          <li>Express REST API with separate routes for GET, POST, PATCH, and DELETE operations</li>
+          <li>MongoDB schema design using Mongoose, with sensible defaults and built-in timestamps</li>
+          <li>API endpoints tested using Thunder Client before connecting them to the frontend</li>
+          <li>Environment variables used to securely store the database connection string</li>
+        </ul>
+
+        <h3>What I learned</h3>
+        <ul>
+          <li>How a React frontend communicates with a backend through REST API calls</li>
+          <li>Structuring an Express API with clean, organized routes and proper error handling</li>
+          <li>Designing a MongoDB schema and understanding how Mongoose models map to it</li>
+        </ul>
+      </div>
+
+      <div class="project-nav">
+        <a href="index.html#projects" class="btn secondary">Back to projects</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Zaid Saly. All Rights Reserved.</p>
+  </footer>
+
+  <a href="#" class="back-to-top">↑</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
